@@ -16,7 +16,7 @@ public class text {
 
         calcular app = new calcular(6, 2);
 
-        assertEquals(4, app.resta());
+        assertEquals(-4, app.resta());
     }
 
     @Test
@@ -58,4 +58,22 @@ public class text {
 
         assertEquals(true, app.positivo());
     }
+
+    @Test
+
+    public void verifiobjeto() {
+
+        calcular app = new calcular(2, 1);
+
+        assertNotNull(app);
+    }
+
+    @Test
+    public void testigual() {
+
+        calcular app = new calcular(4, 3);
+        calcular app2 = new calcular(2, 3);
+        assertSame(app, app2);
+    }
+
 }
